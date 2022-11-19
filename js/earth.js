@@ -42,6 +42,8 @@
 	scene.add(stars);
 
 	var controls = new THREE.TrackballControls(camera);
+	controls.maxDistance = 4
+    controls.minDistance = 1.5
 
 	webglEl.appendChild(renderer.domElement);
 
