@@ -8,47 +8,83 @@
 	  </head>
 	  
 	  <body>
-	<div>
-      <h1>B-Longing Test</h1>
-
-    </div>
+	
     <div id="globeViz"></div>
     
 	  
 		<script>
 
       //Point of view
-      const MAP_CENTER = { lat: 52.3508, lng: 5.2647, altitude: 2};
+      const MAP_CENTER = { lat: 52.3508 - 20, lng: 5.2647, altitude: 2};
 
 		  // Data
 	    const N = 1000;
 
 
       const barsData = [
+        //Romania
         {
           lat: 45.9432,
           lng: 24.9668,
-          size: 0.1
+          size: 0.01,
+          ring: 4,
+          ringRadius: 5
         },
+        //Spain
         {
           lat: 40.4637,
           lng: -3.7492,
-          size: 0.1
+          size: 0.05,
+          ring: 4,
+          ringRadius: 5
         },
+        //Netherlands
         {
           lat: 52.3508,
           lng: 5.2647,
-          size: 0.3
+          size: 0.2,
+          ring: -7,
+          ringRadius: 20
         },
+        //Lithuania
         {
-          lat: 50.791702,
-          lng: -7.09262,
-          size: 0.1
+          lat: 55.1694,
+          lng: 23.8813,
+          size: 0.1,
+          ring: 4,
+          ringRadius: 5
         },
+        //USA
         {
           lat: 37.0902,
           lng: -95.7129,
-          size: 0.1
+          size: 0.02,
+          ring: 5,
+          ringRadius:5
+        },
+        //China
+        {
+          lat: 35.8617,
+          lng: 104.1954,
+          size: 0.1,
+          ring: 6,
+          ringRadius: 5
+        },
+        //Brazil
+        {
+          lat: -14.2350,
+          lng: -51.9253,
+          size: 0.07,
+          ring: 5,
+          ringRadius: 5
+        },
+        //Poland
+        {
+          lat: 51.9194,
+          lng: 19.1451,
+          size: 0.01,
+          ring: 3,
+          ringRadius: 5
         }
       ];
 
@@ -59,50 +95,56 @@
     startLng: 24.9668,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["Romania"]
   },
   {
     startLat: 40.4637,
     startLng: -3.7492,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["Spain"]
   },
   {
     startLat: 37.0902,
     startLng: -95.7129,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["USA"]
   },
   {
-    startLat: -31.791702,
-    startLng: -7.09262,
+    startLat: 55.1694,
+    startLng: 23.8813,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
-
+    color: ["orange", "yellow", "red"],
+    country: ["Lithuania"]
   },
   {
-    startLat: -70.791702,
-    startLng: -7.09262,
+    startLat: -14.2350,
+    startLng: -51.9253,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["Brazil"]
   },
   {
     startLat: 35.8617,
     startLng: 104.1954,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["China"]
   },
   {
-    startLat: 50.791702,
-    startLng: -7.09262,
+    startLat: 51.9194,
+    startLng: 19.1451,
     endLat: 52.3508,
     endLng: 5.2647,
-    color: ["orange", "yellow", "red"]
+    color: ["orange", "yellow", "red"],
+    country: ["Poland"]
   }];
 
 	  
@@ -129,9 +171,9 @@
       //rings
       .ringsData(barsData)
       .ringColor(() => '#FFA500')
-      .ringMaxRadius(2)
-      .ringPropagationSpeed(3)
-      .ringRepeatPeriod(1000)
+      .ringMaxRadius('ringRadius')
+      .ringPropagationSpeed('ring')
+      .ringRepeatPeriod(3000)
       
       //point of view
       .pointOfView(MAP_CENTER, 500)
@@ -141,9 +183,5 @@
       
 		</script>
 	  </body>
-	  Footer
-	  © 2023 GitHub, Inc.
-	  Footer navigation
-	  Terms
-	  Privacy
+	  
 </html>
