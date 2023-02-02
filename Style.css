@@ -106,7 +106,7 @@ top:30%;
   padding-right: 10px;
 }
 
-#featured-columns{
+.featured-columns{
   display: flex;
   flex-direction: row;
   align-items: center;
