@@ -85,7 +85,7 @@ z-index: 7;
 opacity: 0.6;
 position:absolute;
 left:5%;
-top:30%;
+bottom:30%;
 }
 
 #featured-ripple-container h1,h2,h3,h4,h5,h6,p {
@@ -169,8 +169,7 @@ width: 1em;
   .column2 {width: 100%;}
   #featured-ripple-container{
      position: absolute;
-     top: 65%;
-     width: 100%;
+     bottom: 0;
   }
 
   #logo-text{
