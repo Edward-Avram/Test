@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6,p{
 #header-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
 }
 
 #logo-text {
@@ -22,8 +22,7 @@ h1,h2,h3,h4,h5,h6,p{
     font-family: Poppins;
     font-weight: medium;
     color: #f8ab00;
-    padding: 1px 0px 0px 15px;
-  
+    padding-left: 15px;
 }
 
 #logo {
@@ -40,7 +39,6 @@ h1,h2,h3,h4,h5,h6,p{
   
     margin-left: 15px;
     width: 50%;
-    padding-top: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,12 +47,11 @@ h1,h2,h3,h4,h5,h6,p{
   #searchQueryInput {
     width: 100%;
     height: 1.8rem;
-    background: #fae9d7;
     outline: none;
-    border: none;
+    border: 1px solid #d3d3d3;
     border-radius: 1.625rem;
     padding: 0 3.5rem 0 1.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   
   #searchQuerySubmit {
@@ -140,14 +137,13 @@ width: 1em;
   width:90%;
   margin:auto;
 }
-.column1 {
+.feed {
   float: left;
   width: 70%;
-  padding: 10px;
-  height: 300px; 
+  padding-top: 10px;
 }
 
-.column2 {
+.sidebar {
   float: left;
   width: 30%;
   padding: 10px;
@@ -160,13 +156,41 @@ width: 1em;
   clear: both;
 }
 
+.feed-header{
+border-bottom: 1px solid orange;
+margin-bottom: 20px;
+padding-bottom: 10px;
+}
+
+.feed-header:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ripple{
+  width:100%;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  margin: 10px 0px 10px 0px;
+  padding: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 4px 4px 0 rgba(0, 0, 0, 0.09);
+}
+
+.ripple-featured-image{
+  width:150px;
+  height:150px; 
+  object-fit: cover;
+  border: 1px solid #d3d3d3;
+  padding: 5px;
+}
 
 @media screen and (max-width: 600px) {
-  .column1 {
+  .feed {
     width: 100%;
   }
   
-  .column2 {width: 100%;}
+  .sidebar {width: 100%;}
   #featured-ripple-container{
      position: absolute;
      bottom: 0;
