@@ -217,6 +217,7 @@ font-size: 0.7em;
   align-items: center;
   text-align: center;
   padding-right: 2em;
+  margin-bottom: 2em;
 }
 
 .ripple p,h3,h5{
@@ -262,15 +263,49 @@ font-size: 0.7em;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
+.info{
+  border: none;
+}
+
+.info :hover{
+  cursor: pointer;
+}
+
+
+
+.story{
+  display:flex;
+  padding-top: 20px;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 20px;
+}
+
+.story p{
+  color: #666666;
+  margin:0;
+  font-size: 0.75em;
+}
+
+.story img{
+  width:40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
 @media screen and (max-width: 600px) {
   .feed {
     width: 100%;
   }
   
-  .sidebar {width: 100%;}
+  .sidebar {
+    width: 100%;
+  }
+  
   #featured-ripple-container{
      position: absolute;
-     bottom: 10;
+     bottom: 10px;
   }
 
   .ripple{
@@ -281,7 +316,7 @@ font-size: 0.7em;
     width:100%;
     padding-top: 1em;
     padding-bottom: 1em;
-    border-bottom: 2px solid orange;
+    border-bottom: 1px solid orange;
   }
 
   .ripple-id{
