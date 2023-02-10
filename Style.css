@@ -270,9 +270,28 @@ font-size: 0.7em;
   .sidebar {width: 100%;}
   #featured-ripple-container{
      position: absolute;
-     bottom: 0;
+     bottom: 10;
   }
 
+  .ripple{
+    flex-direction: column;
+  }
+
+  .ripple-call-to-action{
+    width:100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid orange;
+  }
+
+  .ripple-id{
+    width:100%;
+    padding: 0px;
+  }
+
+  .ripple-content{
+    width:100%;
+  }
   #logo-text{
     display: none;
   }
